@@ -1,3 +1,4 @@
+
 services:
   db:
     container_name: postgresql_db_aca
@@ -5,9 +6,9 @@ services:
     restart: always
     env_file: .env
     environment:
-      POSTGRES_USER: ${admin}
-      POSTGRES_PASSWORD: ${password}
-      POSTGRES_DB: ${aca}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
     ports:
       - "5432:5432"
     healthcheck:
@@ -29,8 +30,8 @@ services:
     restart: always
     env_file: .env
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.con
-      PGADMIN_DEFAULT_PASSWORD: ${admin}
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
     ports:
       - "5050:80"
     volumes:
