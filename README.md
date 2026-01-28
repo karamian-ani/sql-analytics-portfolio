@@ -33,3 +33,24 @@ Added a Dummy File
 - git push
 Added a New File on GitHub (Remote)     remote_file.txt
 Pulling Changes from GitHub             git pull
+
+06.Dec.2025
+-----------
+Installed Docker Database
+
+09.Dec.2025
+-----------
+Docker containers code explain
+Practice .md, commenting
+Down and Up again Docker
+
+13.Dec.2025
+-----------
+Make a Data Dictionary
+
+16.Dec.2025
+-----------
+DDL
+CRUD
+Constrains
+SQL Rules
