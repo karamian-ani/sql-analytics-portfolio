@@ -200,3 +200,49 @@ Task 8 | Constraint Enforcement Test
 
 
 Task 9 | Reflection (Short Answer)
+
+23.Dec.2025
+-----------
+
+Creating a new table using a ready code then adding INDEXes.
+Learning to filter using WHERE and HAVING clauses, then building new categories out of our data using CASE statement.
+We added all these queries in "Queries" folder.
+
+--To find top 10 clients.
+SELECT 
+	customer_name,
+	SUM(total_sales) AS total_sales
+FROM sales_analysis
+GROUP BY customer_name
+ORDER BY SUM(total_sales) DESC
+LIMIT 10;
+
+
+SELECT
+    *,
+    CASE 
+        WHEN customer_name IN (
+            'Laura Brown',
+            'Michael Smith',
+            'Kurt Hayes',
+            'Justin Clark',
+            'David Lopez',
+            'Cathy Mckenzie',
+            'Paul Smith',
+            'James Moore',
+            'Danielle Carter',
+            'Julie Clark'
+        )
+        THEN 'Top_10'
+        ELSE 'Other'
+    END AS top_clients
+FROM sales_analysis;
+
+
+--Homework - Task 1 | Complex Transaction Segmentation (CASE + WHERE)
+
+--Homework - Task 2 | Category-Level Performance Analysis (CASE + GROUP BY + HAVING)
+
+--Homework - Task 3 | City-Level Activity Analysis (COUNT + HAVING + CASE)
+
+--Homework - Task 4 | Discount Behavior Analysis (CASE + HAVING)
